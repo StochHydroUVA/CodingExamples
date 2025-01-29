@@ -34,17 +34,25 @@ class LogNormal(Distribution):
     self.sigma = None
     self.tau = None
 
-  def fit(self, data, method, npars):
+  def fit(self, data, method, npars, initialize=True):
     assert method == 'MLE' or method == 'MOM' or method == "Lmom","method must = 'MLE','MOM', or 'Lmom'"
     assert npars == 2 or npars == 3,"npars must = 2 or 3"
 
     self.findMoments(data)
     self.findLmoments(data)
     if method == 'MLE':
-      if npars == 2:
-        shape, loc, scale = ss.lognorm.fit(data, floc=0)
-      elif npars == 3:
-        shape, loc, scale = ss.lognorm.fit(data)
+      if initialize == False:
+        if npars == 2:
+          shape, loc, scale = ss.lognorm.fit(data, floc=0)
+        elif npars == 3:
+          shape, loc, scale = ss.lognorm.fit(data)
+      else:
+        if npars == 2:
+          self.fit(data, 'Lmom', 2)
+          shape, loc, scale = ss.lognorm.fit(data, self.sigma, floc=0)
+        elif npars == 3:
+          self.fit(data, 'Lmom', 3)
+          shape, loc, scale = ss.lognorm.fit(data, self.sigma)      	
 
       self.mu = np.log(scale)
       self.sigma = shape
@@ -56,7 +64,7 @@ class LogNormal(Distribution):
         self.tau = 0
       elif npars == 3:
         self.sigma = root(lambda x: (np.exp(3*x**2)-3*np.exp(x**2)+2) / (np.exp(x**2)-1)**(3/2) - self.skew,
-                   0.01, np.std(np.log(data),ddof=1))
+                   0.01, 5*np.std(np.log(data),ddof=1))
         self.mu = 0.5 * (np.log(self.var / (np.exp(self.sigma**2)-1)) - self.sigma**2)
         self.tau = self.xbar - np.exp(self.mu + 0.5*self.sigma**2)
     elif method == 'Lmom':
@@ -68,7 +76,7 @@ class LogNormal(Distribution):
         self.sigma = root(lambda x: self.T3 - (6/np.sqrt(math.pi)) * \
                  integrate.quad(lambda y: special.erf(y/np.sqrt(3))*np.exp(-y**2), 0, x/2)[0] \
                  / math.erf(x/2),
-                 0.01, self.L2)
+                 0.01, 5*self.L2)
         self.mu = np.log(self.L2 / math.erf(self.sigma/2)) - 0.5*self.sigma**2
         self.tau = self.L1 - np.exp(self.mu + 0.5*self.sigma**2)
 
