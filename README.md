@@ -12,3 +12,4 @@ Example code from CE 6280 at UVA
 [08_Change_Points_and_Non-parametric_TSA.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/08_Change_Points_and_Non-parametric_TSA.ipynb)  
 [09_Nonstationary_FFA.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/09_Nonstationary_FFA.ipynb)  
 [10_Mixed_Distributions.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/10_Mixed_Distributions.ipynb)  
+[11_MGBT_for_PILFs.Rmd](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/11_MGBT_for_PILFs.Rmd)  
