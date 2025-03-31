@@ -13,3 +13,4 @@ Example code from CE 6280 at UVA
 [09_Nonstationary_FFA.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/09_Nonstationary_FFA.ipynb)  
 [10_Mixed_Distributions.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/10_Mixed_Distributions.ipynb)  
 [11_MGBT_for_PILFs.Rmd](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/11_MGBT_for_PILFs.Rmd)  
+[12_7Q10_Estimation.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/12_7Q10_Estimation.ipynb)  
