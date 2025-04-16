@@ -15,3 +15,4 @@ Example code from CE 6280 at UVA
 [11_MGBT_for_PILFs.Rmd](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/11_MGBT_for_PILFs.Rmd)  
 [12_7Q10_Estimation.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/12_7Q10_Estimation.ipynb)  
 [13_Multivariate_Normal.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/13_Multivariate_Normal.ipynb)  
+[14_Copulas.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/14_Copulas.ipynb)  
