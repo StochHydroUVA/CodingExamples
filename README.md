@@ -17,3 +17,4 @@ Example code from CE 6280 at UVA
 [13_Multivariate_Normal.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/13_Multivariate_Normal.ipynb)  
 [14_Copulas.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/14_Copulas.ipynb)  
 [15_Model_Calibration.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/15_Model_Calibration.ipynb)  
+[16_Parametric_Uncertainty.ipynb](https://colab.research.google.com/github/StochHydroUVA/CodingExamples/blob/main/15_Parametric_Uncertainty.ipynb)  
